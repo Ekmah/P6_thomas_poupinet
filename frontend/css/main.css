@@ -1,0 +1,12 @@
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:5px;
+}
+h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
