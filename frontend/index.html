@@ -12,32 +12,56 @@
         <script src="js/index.js" defer></script>
         
     </head>
-    <body>
+    <body class="no_margin">
+        <div id="modal_wrapper">
+            <div id="modal_background" onclick="close_modal()"></div>
+            <div id="modal">
+                <img id="img_modal" src="assets/Solid_white.png" alt="A white pixel"/>
+                <h3 id="title_modal"></h3>
+                <span id="genre_modal"></span>
+                Sa date de sortie
+                Son Rated
+                Son score Imdb
+                Son réalisateur
+                La liste des acteurs
+                Sa durée
+                Le pays d’origine
+                Le résultat au Box Office
+                Le résumé du film
+                <button id="modal_close" onclick="close_modal()">X</button>
+            </div>
+        </div>
         <header class="row navbar">
-            <h1>JustStreamIt</h1>
+            <h1 class="no_margin">JustStreamIt</h1>
         </header>
         <main>
             <div id="best_movie_section">
                 <h2>Best Movie: </h2>
-                <img id="best_movie" src="assets/Solid_white.png" alt="A white pixel"/>
+                <button type="button" id="button_best_movie" class="btn" onclick="">
+                    <div id="div_best_movie">
+                        <img id="best_movie_img" src="assets/Solid_white.png" alt="A white pixel"/>
+                        <span class="bold" id="best_movie_title"></span>
+                    </div>
+                </button>
+                
             </div>
             
             <h3>Best Movies</h3>
             <section class="carousel" id="movies_by_note">
                 <button type="button" onclick="" class="prev">Previous</button>
-                <button type="button" class="button_carousel_0">
+                <button type="button" class="button_carousel_0 btn" onclick="">
                     <img class="carousel_0" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
-                <button type="button" class="button_carousel_1">
+                <button type="button" class="button_carousel_1 btn">
                     <img class="carousel_1" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
-                <button type="button" class="button_carousel_2">
+                <button type="button" class="button_carousel_2 btn">
                     <img class="carousel_2" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
-                <button type="button" class="button_carousel_3">
+                <button type="button" class="button_carousel_3 btn">
                     <img class="carousel_3" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>                
-                <button type="button" class="button_carousel_4">
+                <button type="button" class="button_carousel_4 btn">
                     <img class="carousel_4" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
                 <button type="button" onclick="" class="next">Next</button>
@@ -45,19 +69,19 @@
             <h3>Best Action Movies</h3>
             <section class="carousel" id="action_movies_by_note">
                 <button type="button" onclick="" class="prev">Previous</button>
-                <button type="button" class="button_carousel_0">
+                <button type="button" class="button_carousel_0 btn">
                     <img class="carousel_0" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
-                <button type="button" class="button_carousel_1">
+                <button type="button" class="button_carousel_1 btn">
                     <img class="carousel_1" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
-                <button type="button" class="button_carousel_2">
+                <button type="button" class="button_carousel_2 btn">
                     <img class="carousel_2" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
-                <button type="button" class="button_carousel_3">
+                <button type="button" class="button_carousel_3 btn">
                     <img class="carousel_3" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>                
-                <button type="button" class="button_carousel_4">
+                <button type="button" class="button_carousel_4 btn">
                     <img class="carousel_4" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
                 <button type="button" onclick="" class="next">Next</button>
@@ -65,19 +89,19 @@
             <h3>Best Adventure Movies</h3>
             <section class="carousel" id="adventure_movies_by_note">
                 <button type="button" onclick="" class="prev">Previous</button>
-                <button type="button" class="button_carousel_0">
+                <button type="button" class="button_carousel_0 btn">
                     <img class="carousel_0" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
-                <button type="button" class="button_carousel_1">
+                <button type="button" class="button_carousel_1 btn">
                     <img class="carousel_1" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
-                <button type="button" class="button_carousel_2">
+                <button type="button" class="button_carousel_2 btn">
                     <img class="carousel_2" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
-                <button type="button" class="button_carousel_3">
+                <button type="button" class="button_carousel_3 btn">
                     <img class="carousel_3" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>                
-                <button type="button" class="button_carousel_4">
+                <button type="button" class="button_carousel_4 btn">
                     <img class="carousel_4" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
                 <button type="button" onclick="" class="next">Next</button>
@@ -85,19 +109,19 @@
             <h3>Best Animated Movies</h3>
             <section class="carousel" id="animation_movies_by_note">
                 <button type="button" onclick="" class="prev">Previous</button>
-                <button type="button" class="button_carousel_0">
+                <button type="button" class="button_carousel_0 btn">
                     <img class="carousel_0" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
-                <button type="button" class="button_carousel_1">
+                <button type="button" class="button_carousel_1 btn">
                     <img class="carousel_1" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
-                <button type="button" class="button_carousel_2">
+                <button type="button" class="button_carousel_2 btn">
                     <img class="carousel_2" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
-                <button type="button" class="button_carousel_3">
+                <button type="button" class="button_carousel_3 btn">
                     <img class="carousel_3" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>                
-                <button type="button" class="button_carousel_4">
+                <button type="button" class="button_carousel_4 btn">
                     <img class="carousel_4" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
                 <button type="button" onclick="" class="next">Next</button>
