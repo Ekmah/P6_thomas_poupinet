@@ -11,6 +11,7 @@ h3 {
 }
 .navbar {
     background-color: cadetblue;
+    padding:5px;
 }
 .carousel {
     display: flex;
