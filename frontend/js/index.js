@@ -25,6 +25,10 @@ fetch_movies('action');
 fetch_movies('adventure');
 fetch_movies('animation');
 
+
+// fonction changer gross income en nombre lisible et si null en Non renseigné, titre original
+// modal en mémoire 7, affiche 4, bouge 1 par 1,
+// best movie centré avec titre à gauche 
 function show_modal(movie_id) {
     var modal = document.getElementById(`modal_wrapper`)
     create_modal(movie_id)
