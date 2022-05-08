@@ -1,8 +1,9 @@
-# P6_thomas_poupinet
-fonction changer gross income en nombre lisible et si null en Non renseigné, titre original
-modal en mémoire 7, affiche 4, bouge 1 par 1,
-best movie centré avec titre à gauche 
+## Installation:
 
-inclure dans readme installation API
+Installez ce repo github: https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR
 
-list 7 movies, slice 4 nécessaire, prev next incrément decrément quand nécessaire
+## Usage:
+
+Lancez le serveur du repo OCMovies-API.
+Ensuite, ouvrez index.html dans votre navigateur.
+

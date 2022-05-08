@@ -13,12 +13,13 @@ h3 {
     background-color: cadetblue;
     padding:5px;
 }
-.carousel {
+.centered {
     display: flex;
     justify-content: center;
     align-items: center;
     padding:5px;
 }
+
 .no_margin {
     margin: 0px;
 }
@@ -33,11 +34,18 @@ h3 {
 #best_movie_section {
     margin:0px 30px;
 }
+#button_best_movie {
+    margin:auto;
+    min-width: 320px;
+}
 #div_best_movie {
     display: flex;
     background-color: lightgray;
     padding: 10px;
     width: 300px;
+}
+#best_movie_title {
+    align-items: center;
 }
 #img_modal {
     object-fit: scale-down;

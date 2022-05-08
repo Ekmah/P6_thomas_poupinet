@@ -1,16 +1,19 @@
 
 
-function create_carousel(movies, genre) {
+function create_carousel(movies, genre, link, int_min=0) {
     if (genre) {
         var section = document.getElementById(`${genre}_movies_by_note`)
     } else  {
         var section = document.getElementById(`movies_by_note`)
     }
-    
-    for (const movie of movies.results) {
+    var button = section.getElementsByClassName("next")[0]
+    button.setAttribute("onclick", `refresh_carousel('${genre}', '${link}', ${1}, ${int_min})`)
+    var button = section.getElementsByClassName("prev")[0]
+    button.setAttribute("onclick", `refresh_carousel('${genre}', '${link}', ${-1}, ${int_min})`)
+    for (const movie of movies) {
         // console.log(section, `carousel_${movies.results.indexOf(movie)}`)
-        var img = section.getElementsByClassName(`carousel_${movies.results.indexOf(movie)}`)[0]
-        var btn_modal = section.getElementsByClassName(`button_carousel_${movies.results.indexOf(movie)}`)[0]
+        var img = section.getElementsByClassName(`carousel_${movies.indexOf(movie)}`)[0]
+        var btn_modal = section.getElementsByClassName(`button_carousel_${movies.indexOf(movie)}`)[0]
         // console.log(btn_modal)
         btn_modal.setAttribute("onclick", `show_modal('${movie.id}')`)
         // console.log(img)
@@ -18,27 +21,7 @@ function create_carousel(movies, genre) {
         img.src = `${movie.image_url}`
         img.alt = `${movie.title}`
     }
-    if (movies.next) {
-        var button = section.getElementsByClassName("next")[0]
-        // console.log(button.onclick)
-        button.setAttribute("onclick", `refresh_carousel('${genre}', '${movies.next}')`)
-        button.disabled = false
-    } else {
-        var button = section.getElementsByClassName("next")[0]
-        // console.log(button.onclick)
-        button.setAttribute("onclick", ``)
-        button.disabled = true
-    }
-    if (movies.previous) {
-        var button = section.getElementsByClassName("prev")[0]
-        button.setAttribute("onclick", `refresh_carousel('${genre}', '${movies.previous}')`)
-        button.disabled = false
-    } else {
-        var button = section.getElementsByClassName("prev")[0]
-        // console.log(button.onclick)
-        button.setAttribute("onclick", ``)
-        button.disabled = true
-    }
+        
 }
 
 function get_best(movies) {
@@ -65,7 +48,7 @@ function create_modal(movie_id) {
             modal.innerHTML = `
             <img id="img_modal" src="${infos.image_url}" alt="${infos.title}"/>
             <div>
-                <h3 id="title_modal">${infos.title}</h3>
+                <h3 id="title_modal">${infos.original_title}</h3>
                 <span id="genre_modal">Genre(s): ${infos.genres}</span><br>
                 Date de sortie: ${infos.date_published}<br>
                 Rated: ${infos.rated}<br>
@@ -75,8 +58,8 @@ function create_modal(movie_id) {
                 Durée: ${infos.duration} minutes<br>
                 Pays d’origine: ${infos.countries}<br>
                 Résultat au Box Office:<br> 
-                World: ${infos.worldwide_gross_income}$<br>
-                USA: ${infos.usa_gross_income}$<br>
+                World: ${humanize_income(infos.worldwide_gross_income)}<br>
+                USA: ${humanize_income(infos.usa_gross_income)}<br>
                 Description: <br>
                 ${infos.long_description}<br>
             </div>
@@ -86,4 +69,13 @@ function create_modal(movie_id) {
             // handle error
             console.log(error);
         })
+}
+
+function humanize_income(number) {
+    if (number) {
+        number = new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'USD' }).format(number)
+    } else {
+        number = 'Non renseigné'
+    }
+    return number
 }
