@@ -59,8 +59,9 @@ function refresh_carousel(genre, link, inc, int_min) {
                         int_min_loop = movies_full.length -1
                         int_min = movies_full.length
                     }
+                    int_min_loop = int_min_loop % movies_full.length
                     console.log('-----', movies_full.length)
-                    console.log('first_loop', int_min_loop)
+                    console.log('first_loop', int_min_loop, int_min_loop % movies_full.length)
                     for(var i = 0; i < 4; i++){
                         console.log(int_min_loop)
                         movies.push(movies_full[int_min_loop])
