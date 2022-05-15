@@ -33,25 +33,31 @@
         </div>
         <header class="row navbar">
             <h1 class="no_margin">JustStreamIt</h1>
+            <nav>
+                <a href="">Acceuil</a>
+                <a href="">Catégories</a>
+            </nav>
         </header>
         <main>
-            <div id="best_movie_section">
-                <h2>Best Movie: </h2>
-                <button type="button" id="button_best_movie" class="btn centered" onclick="">
-                    <div id="div_best_movie">
-                        <div>
-                            <span class="bold" id="best_movie_title"></span>
-                        </div>
-                        
-                        <img id="best_movie_img" src="assets/Solid_white.png" alt="A white pixel"/>
+            <h2 id="best_movie">Meilleur Film: </h2>
+            <div id="best_movie_section" class="centered">
+                <div id="div_best_movie">
+                    <div id="best_movie_text">
+                        <span class="bold" id="best_movie_title"></span>
+                        <button type="button" id="button_best_movie" class="centered" onclick="">Regarder</button>
+                        <span id="best_movie_desc"></span>
                     </div>
-                </button>
-                
+                    
+                    <img id="best_movie_img" src="assets/Solid_white.png" alt="A white pixel"/>
+                </div>
             </div>
             
-            <h3>Best Movies</h3>
+            <h3>Meilleurs films</h3>
             <section class="centered" id="movies_by_note">
-                <button type="button" onclick="" class="prev">Previous</button>
+                <button type="button" onclick="" class="prev nav_btn">
+                    <img class="prev_img" src="assets/previous-return-svgrepo-com.svg" 
+                    alt="previous icon" height="20px" width="20px"/>
+                </button>
                 <button type="button" class="button_carousel_0 btn" onclick="">
                     <img class="carousel_0" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
@@ -64,12 +70,18 @@
                 <button type="button" class="button_carousel_3 btn">
                     <img class="carousel_3" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
-                <button type="button" onclick="" class="next">Next</button>
+                <button type="button" onclick="" class="next nav_btn">
+                    <img class="next_img" src="assets/next-svgrepo-com.svg" 
+                    alt="next icon" height="20px" width="20px"/>
+                </button>
             </section>
-            <h3>Best Action Movies</h3>
+            <h3>Meilleurs films d'action</h3>
             <section class="centered" id="action_movies_by_note">
-                <button type="button" onclick="" class="prev">Previous</button>
-                <button type="button" class="button_carousel_0 btn">
+                <button type="button" onclick="" class="prev nav_btn">
+                    <img class="prev_img" src="assets/previous-return-svgrepo-com.svg" 
+                    alt="previous icon" height="20px" width="20px"/>
+                </button>
+                <button type="button" class="button_carousel_0 btn" onclick="">
                     <img class="carousel_0" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
                 <button type="button" class="button_carousel_1 btn">
@@ -81,12 +93,18 @@
                 <button type="button" class="button_carousel_3 btn">
                     <img class="carousel_3" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
-                <button type="button" onclick="" class="next">Next</button>
+                <button type="button" onclick="" class="next nav_btn">
+                    <img class="next_img" src="assets/next-svgrepo-com.svg" 
+                    alt="next icon" height="20px" width="20px"/>
+                </button>
             </section>
-            <h3>Best Adventure Movies</h3>
+            <h3>Meilleurs films d'aventure</h3>
             <section class="centered" id="adventure_movies_by_note">
-                <button type="button" onclick="" class="prev">Previous</button>
-                <button type="button" class="button_carousel_0 btn">
+                <button type="button" onclick="" class="prev nav_btn">
+                    <img class="prev_img" src="assets/previous-return-svgrepo-com.svg" 
+                    alt="previous icon" height="20px" width="20px"/>
+                </button>
+                <button type="button" class="button_carousel_0 btn" onclick="">
                     <img class="carousel_0" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
                 <button type="button" class="button_carousel_1 btn">
@@ -98,12 +116,18 @@
                 <button type="button" class="button_carousel_3 btn">
                     <img class="carousel_3" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
-                <button type="button" onclick="" class="next">Next</button>
+                <button type="button" onclick="" class="next nav_btn">
+                    <img class="next_img" src="assets/next-svgrepo-com.svg" 
+                    alt="next icon" height="20px" width="20px"/>
+                </button>
             </section>
-            <h3>Best Animated Movies</h3>
+            <h3>Meilleurs films d'animation</h3>
             <section class="centered" id="animation_movies_by_note">
-                <button type="button" onclick="" class="prev">Previous</button>
-                <button type="button" class="button_carousel_0 btn">
+                <button type="button" onclick="" class="prev nav_btn">
+                    <img class="prev_img" src="assets/previous-return-svgrepo-com.svg" 
+                    alt="previous icon" height="20px" width="20px"/>
+                </button>
+                <button type="button" class="button_carousel_0 btn" onclick="">
                     <img class="carousel_0" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
                 <button type="button" class="button_carousel_1 btn">
@@ -115,7 +139,10 @@
                 <button type="button" class="button_carousel_3 btn">
                     <img class="carousel_3" src="assets/Solid_white.png" alt="A white pixel"/>
                 </button>
-                <button type="button" onclick="" class="next">Next</button>
+                <button type="button" onclick="" class="next nav_btn">
+                    <img class="next_img" src="assets/next-svgrepo-com.svg" 
+                    alt="next icon" height="20px" width="20px"/>
+                </button>
             </section>
         </main>
     </body>

@@ -12,6 +12,9 @@ h3 {
 .navbar {
     background-color: cadetblue;
     padding:5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .centered {
     display: flex;
@@ -19,7 +22,6 @@ h3 {
     align-items: center;
     padding:5px;
 }
-
 .no_margin {
     margin: 0px;
 }
@@ -31,18 +33,29 @@ h3 {
     height: 268px;
     cursor: pointer;
 }
+.nav_btn {
+    margin:0px;
+    padding:0px;
+    height:25px;
+    width:25px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+#best_movie {
+    display: flex;
+    justify-content: center;
+}
 #best_movie_section {
     margin:0px 30px;
 }
 #button_best_movie {
     margin:auto;
-    min-width: 320px;
 }
 #div_best_movie {
     display: flex;
     background-color: lightgray;
     padding: 10px;
-    width: 300px;
+    width:50%;
 }
 #best_movie_title {
     align-items: center;

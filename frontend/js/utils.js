@@ -25,15 +25,23 @@ function create_carousel(movies, genre, link, int_min=0) {
 }
 
 function get_best(movies) {
-    const movie = movies[0]
-    var img = document.getElementById(`best_movie_img`)
-    var best_movie_title = document.getElementById(`best_movie_title`)
-    var button_best_movie = document.getElementById(`button_best_movie`)
-    button_best_movie.setAttribute("onclick", `show_modal('${movie.id}')`)
-    best_movie_title.innerText = `${movie.title}`
-    img.src = `${movie.image_url}`
-    img.alt = `${movie.title}`
-    
+    adress = movies[0].url
+    fetch(adress)
+        .then(function(response) {
+            return response.json()
+        })
+        .then(function(movie){
+            console.log(movie)
+            var img = document.getElementById(`best_movie_img`)
+            var best_movie_title = document.getElementById(`best_movie_title`)
+            var best_movie_desc = document.getElementById(`best_movie_desc`)
+            var button_best_movie = document.getElementById(`button_best_movie`)
+            button_best_movie.setAttribute("onclick", `show_modal('${movie.id}')`)
+            best_movie_desc.innerText = `${movie.long_description}`
+            best_movie_title.innerText = `${movie.title}`
+            img.src = `${movie.image_url}`
+            img.alt = `${movie.title}`
+        })
 }
 
 function create_modal(movie_id) {
